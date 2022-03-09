@@ -1,7 +1,5 @@
 import cv2
-import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
+
 
 def process(name):
     image = cv2.imread(name)
