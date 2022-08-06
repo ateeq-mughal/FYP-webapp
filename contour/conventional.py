@@ -1,7 +1,7 @@
 import cv2
 
 
-def process(name):
+def processConventionalContouring(name):
     image = cv2.imread(name)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
@@ -12,4 +12,4 @@ def process(name):
     # ctr = np.array(cnt).reshape((-1,1,2)).astype(np.int32)
     # cv2.drawContours(coins, cnt, 0, (0, 255, 0), -1)
     cv2.drawContours(coins, cnt, -1, (0, 0, 255), 2)
-    cv2.imwrite('media/output.png', coins)
+    cv2.imwrite('media/conventional/output.png', coins)
